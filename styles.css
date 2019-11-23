@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+  }
+
+a img {
+    width: 25px;
+    height: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ul{
+    list-style-type: none;
+}
+.photo{
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+li{
+    display: inline;
+}
+
+#greeting{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+span.important{ 
+    font-weight: bold;
+}
+#sentences{
+    padding-left: 40%;
+    max-width: 80%;
+    text-align: justify;
+    text-align-last: left;
+    font-size: 18px;
+}
+
+#introContainer{
+    padding-top: 10%;
+    padding-left: 50%;
+    padding-right: 10%;
+    max-width: 100%;
+    font-size: 18px;
+}
+#name{
+    padding-left: 10%;
+}
+#icons{
+    padding-left: 30%;
+}
