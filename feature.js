@@ -46,7 +46,7 @@ Ball.prototype.update = function(){
         this.y += this.velY;
     }
 }
-while (balls.length < 10){
+while (balls.length < 15){
     size = 2;
     var ball = new Ball(random(0, width), random(0, height), random(-1,1), random(-1,1), '#606060', size);
     balls.push(ball);
