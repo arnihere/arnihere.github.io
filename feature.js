@@ -1,7 +1,7 @@
 var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
 script.type = 'text/javascript';
-var canvas = document.querySelector('canvas');
+var canvas = document.getElementById('c');
 
 var context = canvas.getContext('2d');
 
@@ -46,7 +46,7 @@ Ball.prototype.update = function(){
         this.y += this.velY;
     }
 }
-while (balls.length < 10){
+while (balls.length < 30){
     size = 2;
     var ball = new Ball(random(0, width), random(0, height), random(-1,1), random(-1,1), '#606060', size);
     balls.push(ball);
@@ -54,14 +54,11 @@ while (balls.length < 10){
 
  Ball.prototype.neighbors = function(){
     var radius = 221;
-    var temp = 0;
-    while (temp < radius){
-        for (var i = 0; i < balls.length; i++){
-            var dist = Math.sqrt((this.x - balls[i].x) * (this.x - balls[i].x) + (this.y - balls[i].y) * (this.y - balls[i].y));
-            if (dist <= radius){
-                drawLine(this.x, this.y, balls[i].x, balls[i].y, dist);
-            }
-        }temp += 1;
+    for (var i = 0; i < balls.length; i++){
+        var dist = Math.sqrt((this.x - balls[i].x) * (this.x - balls[i].x) + (this.y - balls[i].y) * (this.y - balls[i].y));
+        if (dist <= radius){
+            drawLine(this.x, this.y, balls[i].x, balls[i].y, dist);
+        }
     }
 }
 
@@ -71,7 +68,7 @@ var drawLine = (a,b,c,d, factor) =>{
     context.beginPath();
     context.moveTo(a,b);
     context.lineTo(c,d);
-    context.lineWidth = 0.001;
+    context.lineWidth = 0.05;
 
     context.strokeStyle = "rgb(" + factor + "," + factor + "," + factor + ")";
     context.stroke();
