@@ -68,7 +68,7 @@ var drawLine = (a,b,c,d, factor) =>{
     context.beginPath();
     context.moveTo(a,b);
     context.lineTo(c,d);
-    context.lineWidth = 0.05;
+    context.lineWidth = 0.4;
 
     context.strokeStyle = "rgb(" + factor + "," + factor + "," + factor + ")";
     context.stroke();
