@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Arnur Makenov 20160860</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />  <link href="./capital_game.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Your HTML here-->
+    <div class="center-div">
+      <body>
+        <div id="map">
+        <iframe
+        id = "iframe"
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDsighQ069CvUZZs4GzGeBpcmrsMKldxcM
+          &q=Space+Needle,Seattle+WA&language=en&maptype=roadmap" allowfullscreen>
+        </iframe></div>
+        <p>Do you know the capital of this country?<p>
+        <table id="table">
+          <tr>
+            <th>Country</th>
+            <th>Capital</th>
+            <th>Answer</th>
+          </tr>
+
+          <tr>
+            <td id="pr2__question"></td>
+            <td>
+              <input type="text" id="pr2__answer" size="15" placeholder="Your answer">
+            </td>
+            <td>
+              <button name="seeans" id="pr2__submit">See Answer</button>
+            </td>
+          </tr>
+          <tr class="radios">
+            <td colspan="3">
+              <input type="radio" id="all" name="gee"checked>All
+              <input type="radio" id="corOnly" name="gee">Correct Only
+              <input type="radio" id="incOnly" name="gee">Incorrect Only
+            </td>
+          </tr> 
+          <tr class="btns">
+            <td colspan="3">
+              <button name="clear" id="pr3__clear">Clear</button>
+              <button name="Undo" id="pr3__undo">Undo</button>
+              <button name="Restart" id="pr3__restart">Restart</button>
+            </td>
+          </tr>
+        </table>
+      </body>
+  </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA0nDL7Wvfks2Rw00PV-7bG9greFvUUec4",
+        authDomain: "guess-capital.firebaseapp.com",
+        databaseURL: "https://guess-capital.firebaseio.com",
+        projectId: "guess-capital",
+        storageBucket: "guess-capital.appspot.com",
+        messagingSenderId: "191632785296",
+        appId: "1:191632785296:web:aacb406c174f5dbf5cfd15",
+        measurementId: "G-496F0V29PR"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      var database = firebase.database();
+    </script>
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./country_capital_pairs.js"></script>
+    <script type="text/javascript" src="jquery.autocomplete.js"></script>
+    <script src="./capital_game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+  </body>
+</html>

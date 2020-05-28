@@ -1,0 +1,48 @@
+body {
+    background-color: #eee;
+}
+
+.center-div{
+    margin: 0 auto;
+    width: 600px;
+}
+p{
+    font-family: 'Sen', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+table{
+    border-collapse: collapse;
+    font-size: large;
+}
+td,th{
+    text-align: left;
+    padding: 4px;
+    min-width: 120px;
+}
+tr:not(:first-child){
+    border-bottom: 2px solid rgb(82, 11, 1);
+    border-top: 2px solid rgb(82, 11, 1);
+}
+tr.radios{
+    border-bottom: 0px;
+}
+tr.btns{
+    border-top: 0px;
+}
+tr:first-child{
+    border-bottom: 3px solid rgb(11, 40, 121);
+}
+
+.correct{
+    color: #0000ff;
+}
+
+.incorrect{
+    color: red;
+}
+#incCity{
+    text-decoration: line-through;
+}
+.ui-autocomplete {max-height: 200px; overflow-y: scroll; overflow-x: hidden;}
+
