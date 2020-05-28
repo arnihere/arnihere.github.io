@@ -52,7 +52,7 @@ $( document ).ready(function() {
 
   $.ajax({
       type: "GET",  
-      url: "http://cs374.s3.ap-northeast-2.amazonaws.com/country_capital_pairs.csv",
+      url: "https://cs374.s3.ap-northeast-2.amazonaws.com/country_capital_pairs.csv",
       dataType: "text",
       async: false,       
       success: function(res)  {
