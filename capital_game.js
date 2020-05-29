@@ -316,8 +316,8 @@ $( document ).ready(function() {
           var countryCell = row.insertCell(0);
           
           countryCell.innerHTML = country;
-          
-          row.insertCell(1).innerHTML = capital;
+          var x = row.insertCell(1);
+          x.innerHTML = capital;
           var c = row.insertCell(2);
           var timer;
           $(countryCell).on({
@@ -346,7 +346,22 @@ $( document ).ready(function() {
             deleteEntry(this);
           }
           c.appendChild(btn);
-      
+          
+          $(countryCell).hover(function(){
+            $(row).css("background-color", "lightgrey");
+          }, function(){
+            $(row).css("background-color", "transparent");
+          })
+          $(div).hover(function(){
+            $(row).css("background-color", "lightgrey");
+          }, function(){
+            $(row).css("background-color", "transparent");
+          })
+          $(x).hover(function(){
+            $(row).css("background-color", "transparent");
+          }, function(){
+            $(row).css("background-color", "transparent");
+          })
           $(div).on({
             'mouseover': function () {
               timer = setTimeout(function () {
@@ -363,6 +378,7 @@ $( document ).ready(function() {
                 clearTimeout(timer);
             }
           })
+
         }
         function insertinCor(country, capital, inp){
           k++;
@@ -403,6 +419,21 @@ $( document ).ready(function() {
                 clearTimeout(timer);
             }
         });
+        $(countryCell).hover(function(){
+          $(row).css("background-color", "lightgrey");
+        }, function(){
+          $(row).css("background-color", "transparent");
+        })
+        $(div).hover(function(){
+          $(row).css("background-color", "lightgrey");
+        }, function(){
+          $(row).css("background-color", "transparent");
+        })
+        $(incCell).hover(function(){
+          $(row).css("background-color", "transparent");
+        }, function(){
+          $(row).css("background-color", "transparent");
+        })
           $(div).on({
             'mouseover': function () {
               timer = setTimeout(function () {
